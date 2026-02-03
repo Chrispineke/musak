@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus | Modern Enterprise OS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="navbar">
+        <div class="logo">NEXUS<span>.</span></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#market">Market</a></li>
+                <li><a href="#features">Scale</a></li>
+                <li><button id="themeToggle">🌓</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content reveal">
+            <h1>Building the <span>Future</span> of Web.</h1>
+            <p>Scalable architecture meets breathtaking design. Ready for the next billion users.</p>
+            <button id="cta-button">Explore Engine</button>
+        </div>
+    </section>
+
+    <section class="live-market" id="market">
+        <div class="container reveal">
+            <div class="section-header">
+                <h2>Live Asset Stream</h2>
+                <div class="market-controls">
+                    <input type="text" id="cryptoSearch" placeholder="Search assets...">
+                    <button id="refreshData" class="btn-secondary">Sync Data</button>
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Asset</th>
+                            <th>Price (USD)</th>
+                            <th>24h Change</th>
+                            <th>Market Cap</th>
+                        </tr>
+                    </thead>
+                    <tbody id="crypto-body">
+                        <tr class="skeleton-row"><td></td><td></td><td></td><td></td></tr>
+                        <tr class="skeleton-row"><td></td><td></td><td></td><td></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="grid-container">
+            <div class="card reveal"><h3>Global Edge</h3><p>200+ edge locations with sub-10ms latency.</p></div>
+            <div class="card reveal"><h3>Neural Security</h3><p>AI-driven threat detection evolving daily.</p></div>
+            <div class="card reveal"><h3>Infinite Scale</h3><p>Handle 1M+ requests per second seamlessly.</p></div>
+        </div>
+    </section>
+
+    <section class="contact-section reveal" id="contact">
+        <div class="glass-form">
+            <h2>Contact Nexus</h2>
+            <form id="contactForm">
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Message..." required></textarea>
+                <button type="submit">Send Signal</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

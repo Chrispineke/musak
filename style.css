@@ -1,0 +1,45 @@
+:root {
+    --primary: #6366f1;
+    --bg: #0f172a;
+    --text: #f8fafc;
+    --glass: rgba(255, 255, 255, 0.05);
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+.light-theme {
+    --bg: #f8fafc;
+    --text: #0f172a;
+    --glass: rgba(0, 0, 0, 0.05);
+    --border: rgba(0, 0, 0, 0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; transition: background 0.3s, color 0.3s; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
+
+/* Navbar */
+header { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; position: fixed; width: 100%; z-index: 1000; }
+header.scrolled { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+
+/* Hero Section */
+.hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: radial-gradient(circle at top right, #1e1b4b, var(--bg)); }
+.hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); margin-bottom: 1rem; }
+.hero span { color: var(--primary); }
+
+/* Table & Market */
+.live-market { padding: 80px 8%; }
+.table-wrapper { background: var(--glass); border-radius: 20px; border: 1px solid var(--border); padding: 20px; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; padding: 15px; color: var(--primary); }
+td { padding: 15px; border-bottom: 1px solid var(--border); }
+
+/* Skeleton Loading */
+@keyframes shimmer { 0% { opacity: 0.5; } 50% { opacity: 1; } 100% { opacity: 0.5; } }
+.skeleton-row td { height: 25px; background: var(--glass); animation: shimmer 1.5s infinite; }
+
+/* Reveal Animations */
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* Buttons & Inputs */
+button { background: var(--primary); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+input, textarea { width: 100%; padding: 12px; margin-bottom: 15px; background: var(--glass); border: 1px solid var(--border); border-radius: 8px; color: var(--text); }
